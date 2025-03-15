@@ -1,0 +1,2 @@
+C:/Users/ASUS/Desktop/Champ Moblie/final_exam_650710155/android/app/.cxx/Debug/6q4z32v6/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/Desktop/Champ Moblie/final_exam_650710155/android/app/.cxx/Debug/6q4z32v6/x86_64/CMakeFiles/rebuild_cache.dir
