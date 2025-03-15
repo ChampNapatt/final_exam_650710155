@@ -1,83 +1,41 @@
 import 'package:flutter/material.dart';
+import 'answer1.dart';
+import 'answer2.dart';
 
 void main() {
-  runApp(MaterialApp(home: ProfileCard()));
+  runApp(MaterialApp(home: PortalPage()));
 }
 
-class ProfileCard extends StatelessWidget {
+class PortalPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 216, 248, 244),
-      body: SafeArea(
+      appBar: AppBar(
+        title: Center(child: Text('Final Exam')),
+        backgroundColor: Colors.blue,
+      ),
+      body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            CircleAvatar(
-              radius: 80,
-              backgroundImage: AssetImage('assets/profile.jpg'),
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Napatt Srisodlert',
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 8),
-            Text(
-              'IT Silpakorn Student',
-              style: TextStyle(fontSize: 18, color: Colors.grey[700]),
-            ),
-            SizedBox(height: 20),
-            Card(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-              child: ListTile(
-                leading: Icon(Icons.cake, color: Colors.pink),
-                title: Text('26 January 2004'),
-              ),
-            ),
-            Card(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-              child: ListTile(
-                leading: Icon(Icons.email, color: Colors.blue),
-                title: Text('srisodlert_n@silpakorn.edu'),
-              ),
-            ),
-            Card(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-              child: ListTile(
-                leading: Icon(Icons.phone, color: Colors.green),
-                title: Text('+66 926317578'),
-              ),
-            ),
-            Card(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-              child: ListTile(
-                leading: Icon(Icons.location_on, color: Colors.red),
-                title: Text('Ratchaburi, Thailand'),
-              ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfileCard()),
+                );
+              },
+              child: Text('Answer1'),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      'ติดต่อได้ที่ srisodlert_n@silpakorn.edu หรือเบอร์ 0926317578',
-                    ),
-                    duration: Duration(seconds: 3), // แสดงผล 3 วินาทีgit remote remove origin
-                    behavior:
-                        SnackBarBehavior.floating, // ให้ Snackbar ลอยขึ้นมา
-                  ),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AnswerP2()),
                 );
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              child: Text('Contact Me', style: TextStyle(fontSize: 18)),
+              child: Text('Answer2'),
             ),
           ],
         ),
