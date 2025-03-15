@@ -64,7 +64,7 @@ class ProfileCard extends StatelessWidget {
                     content: Text(
                       'ติดต่อได้ที่ srisodlert_n@silpakorn.edu หรือเบอร์ 0926317578',
                     ),
-                    duration: Duration(seconds: 3), // แสดงผล 3 วินาที
+                    duration: Duration(seconds: 3), // แสดงผล 3 วินาทีgit remote remove origin
                     behavior:
                         SnackBarBehavior.floating, // ให้ Snackbar ลอยขึ้นมา
                   ),
